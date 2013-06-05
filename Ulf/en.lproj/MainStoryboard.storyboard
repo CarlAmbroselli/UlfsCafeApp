@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo_ulf.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nLY-da-M2F">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="2M4-Wd-bG5"/>
+                                    <constraint firstAttribute="height" constant="163" id="RYM-Ux-6g9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B11-Yn-skk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="LKv-PR-UCQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="FB Login">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="2" eventType="touchUpInside" id="qgy-Wm-6DL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B11-Yn-skk" firstAttribute="centerX" secondItem="nLY-da-M2F" secondAttribute="centerX" type="default" id="Clk-lE-tM3"/>
+                            <constraint firstItem="nLY-da-M2F" firstAttribute="top" secondItem="3" secondAttribute="top" constant="148" id="KI0-tl-H7C"/>
+                            <constraint firstItem="B11-Yn-skk" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="VHQ-A9-g3r"/>
+                            <constraint firstAttribute="bottom" secondItem="B11-Yn-skk" secondAttribute="bottom" constant="94" id="Ynn-wC-NgM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZkU-PW-Rh8"/>
+                    <connections>
+                        <segue destination="N4o-Wp-kly" kind="modal" identifier="menuViewSegue" id="OvM-JI-mHB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-902" y="-23"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="kYR-Gh-LxR">
+            <objects>
+                <viewController id="N4o-Wp-kly" customClass="MenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78I-aQ-XEz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Essen wird geladen..." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="moW-uD-fjk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="19i-Uw-mpa"/>
+                                    <constraint firstAttribute="width" constant="192" id="FyF-o9-BY6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="moW-uD-fjk" firstAttribute="centerX" secondItem="78I-aQ-XEz" secondAttribute="centerX" type="default" id="Db1-RV-0W5"/>
+                            <constraint firstItem="moW-uD-fjk" firstAttribute="centerY" secondItem="78I-aQ-XEz" secondAttribute="centerY" type="default" id="VOU-MU-FzR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuLabel" destination="moW-uD-fjk" id="cL1-ki-IAb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfo-OU-fiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="-30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_ulf.jpg" width="594" height="525"/>
+    </resources>
+    <classes>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonPressed:"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
