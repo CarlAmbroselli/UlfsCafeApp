@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -12,7 +12,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B11-Yn-skk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="B11-Yn-skk">
+                                <rect key="frame" x="26" y="367" width="269" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="FacebookButton.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
@@ -26,52 +27,30 @@
                                     <action selector="loginButtonPressed:" destination="2" eventType="touchUpInside" id="qgy-Wm-6DL"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UlfLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qix-2b-07Q">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="OZZ-VY-jW3"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UlfLogo.png" id="qix-2b-07Q">
+                                <rect key="frame" x="0.0" y="7" width="320" height="128"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Leider werden die Daten nur über Facebook bereitgestellt und daher müsst ihr zwei Dinge erfüllen:" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-Bi-dUi">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Leider werden die Daten nur über Facebook bereitgestellt und daher müsst ihr zwei Dinge erfüllen:" id="G3S-Bi-dUi">
+                                <rect key="frame" x="20" y="134" width="280" height="112"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="112" id="l9e-J1-i51"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1. Mit Ulf befreundet sein bei Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="NxY-Cd-9UK">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="1. Mit Ulf befreundet sein bei Facebook" id="NxY-Cd-9UK">
+                                <rect key="frame" x="20" y="246" width="280" height="59"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="BXa-yQ-FXQ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2. Euch mit Facebook verbinden" translatesAutoresizingMaskIntoConstraints="NO" id="84f-0r-2nS">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="2. Euch mit Facebook verbinden" id="84f-0r-2nS">
+                                <rect key="frame" x="20" y="300" width="280" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" type="user" id="Wcx-o2-N5Q"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="qix-2b-07Q" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="0O4-hf-ULa"/>
-                            <constraint firstAttribute="bottom" secondItem="NxY-Cd-9UK" secondAttribute="bottom" constant="155" id="Dih-h0-iLv"/>
-                            <constraint firstItem="G3S-Bi-dUi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Gfz-a7-Aan"/>
-                            <constraint firstAttribute="trailing" secondItem="G3S-Bi-dUi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="L5S-RZ-tmn"/>
-                            <constraint firstItem="84f-0r-2nS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LCW-ZS-pvm"/>
-                            <constraint firstAttribute="trailing" secondItem="NxY-Cd-9UK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LaH-ZF-UvB"/>
-                            <constraint firstItem="qix-2b-07Q" firstAttribute="top" secondItem="3" secondAttribute="top" constant="7" id="PQw-xn-8I1"/>
-                            <constraint firstItem="G3S-Bi-dUi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="133" id="Qyo-LK-6LD"/>
-                            <constraint firstAttribute="trailing" secondItem="84f-0r-2nS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="U7v-VG-NkB"/>
-                            <constraint firstAttribute="bottom" secondItem="84f-0r-2nS" secondAttribute="bottom" constant="127" id="WTa-t2-q5L"/>
-                            <constraint firstItem="NxY-Cd-9UK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XMB-bu-ueI"/>
-                            <constraint firstAttribute="bottom" secondItem="B11-Yn-skk" secondAttribute="bottom" constant="51" id="a5S-b5-Blx"/>
-                            <constraint firstItem="B11-Yn-skk" firstAttribute="centerX" secondItem="84f-0r-2nS" secondAttribute="centerX" type="default" id="coO-gT-dka"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZkU-PW-Rh8"/>
                     <connections>
@@ -90,35 +69,23 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Essen wird geladen..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="moW-uD-fjk">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="116" id="19i-Uw-mpa"/>
-                                    <constraint firstAttribute="width" constant="192" id="FyF-o9-BY6"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Essen wird geladen..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="moW-uD-fjk">
+                                <rect key="frame" x="64" y="206" width="192" height="116"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Heutiges Tagesessen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBV-Kt-7Pq">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Heutiges Tagesessen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IBV-Kt-7Pq">
+                                <rect key="frame" x="59" y="163" width="203" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UlfLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yr9-H8-Fu7">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="gSw-FN-SJo"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UlfLogo.png" id="Yr9-H8-Fu7">
+                                <rect key="frame" x="0.0" y="7" width="320" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="IBV-Kt-7Pq" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="163" id="J0W-7e-pzA"/>
-                            <constraint firstItem="IBV-Kt-7Pq" firstAttribute="centerX" secondItem="moW-uD-fjk" secondAttribute="centerX" type="default" id="NRj-bP-zPL"/>
-                            <constraint firstItem="Yr9-H8-Fu7" firstAttribute="leading" secondItem="78I-aQ-XEz" secondAttribute="leading" type="default" id="ZrO-sZ-ruE"/>
-                            <constraint firstItem="moW-uD-fjk" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="206" id="bVA-Pa-YZK"/>
-                            <constraint firstItem="IBV-Kt-7Pq" firstAttribute="centerX" secondItem="Yr9-H8-Fu7" secondAttribute="centerX" type="default" id="i6T-Q9-J5H"/>
-                            <constraint firstItem="Yr9-H8-Fu7" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="7" id="kBI-MB-kN9"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="menuLabel" destination="moW-uD-fjk" id="cL1-ki-IAb"/>
@@ -135,6 +102,20 @@
         <image name="FacebookButtonPressed.png" width="269" height="42"/>
         <image name="UlfLogo.png" width="320" height="101"/>
     </resources>
+    <classes>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonPressed:"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

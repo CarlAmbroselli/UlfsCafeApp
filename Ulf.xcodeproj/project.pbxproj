@@ -26,7 +26,7 @@
 		6AB12B00175E85810015B732 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB12AFF175E85810015B732 /* LoginViewController.m */; };
 		6AB12B07175E88B00015B732 /* logo_ulf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12B06175E88B00015B732 /* logo_ulf.jpg */; };
 		6AEF9DA7175F884800067F7E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEF9DA6175F884800067F7E /* MenuViewController.m */; };
-		6AEF9DAC175F915200067F7E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DAB175F915200067F7E /* FacebookSDK.framework */; };
+		6AEF9DAC175F915200067F7E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DAB175F915200067F7E /* FacebookSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DAE175F917400067F7E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DAD175F917400067F7E /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DB0175F917900067F7E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DAF175F917900067F7E /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DB2175F918000067F7E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DB1175F918000067F7E /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -300,7 +300,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -324,7 +324,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -341,6 +341,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ulf/Ulf-Prefix.pch";
 				INFOPLIST_FILE = "Ulf/Ulf-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -356,6 +357,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ulf/Ulf-Prefix.pch";
 				INFOPLIST_FILE = "Ulf/Ulf-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
