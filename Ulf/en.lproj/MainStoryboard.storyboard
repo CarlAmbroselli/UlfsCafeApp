@@ -9,38 +9,68 @@
             <objects>
                 <viewController id="2" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo_ulf.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nLY-da-M2F">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="186" id="2M4-Wd-bG5"/>
-                                    <constraint firstAttribute="height" constant="163" id="RYM-Ux-6g9"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B11-Yn-skk">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="LKv-PR-UCQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="FB Login">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B11-Yn-skk">
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" backgroundImage="FacebookButton.png">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="selected" backgroundImage="FacebookButtonPressed.png"/>
+                                <state key="highlighted" backgroundImage="FacebookButtonPressed.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="2" eventType="touchUpInside" id="qgy-Wm-6DL"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UlfLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qix-2b-07Q">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="OZZ-VY-jW3"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Leider werden die Daten nur über Facebook bereitgestellt und daher müsst ihr zwei Dinge erfüllen:" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-Bi-dUi">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="jJX-Gl-mfQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1. Mit Ulf befreundet sein bei Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="NxY-Cd-9UK">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="BXa-yQ-FXQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2. Euch mit Facebook verbinden" translatesAutoresizingMaskIntoConstraints="NO" id="84f-0r-2nS">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" type="user" id="Wcx-o2-N5Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="B11-Yn-skk" firstAttribute="centerX" secondItem="nLY-da-M2F" secondAttribute="centerX" type="default" id="Clk-lE-tM3"/>
-                            <constraint firstItem="nLY-da-M2F" firstAttribute="top" secondItem="3" secondAttribute="top" constant="148" id="KI0-tl-H7C"/>
-                            <constraint firstItem="B11-Yn-skk" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="VHQ-A9-g3r"/>
-                            <constraint firstAttribute="bottom" secondItem="B11-Yn-skk" secondAttribute="bottom" constant="94" id="Ynn-wC-NgM"/>
+                            <constraint firstItem="qix-2b-07Q" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="0O4-hf-ULa"/>
+                            <constraint firstItem="NxY-Cd-9UK" firstAttribute="top" secondItem="G3S-Bi-dUi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3EH-XR-3Ia"/>
+                            <constraint firstItem="G3S-Bi-dUi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Gfz-a7-Aan"/>
+                            <constraint firstAttribute="trailing" secondItem="G3S-Bi-dUi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="L5S-RZ-tmn"/>
+                            <constraint firstItem="84f-0r-2nS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LCW-ZS-pvm"/>
+                            <constraint firstAttribute="trailing" secondItem="NxY-Cd-9UK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LaH-ZF-UvB"/>
+                            <constraint firstItem="qix-2b-07Q" firstAttribute="top" secondItem="3" secondAttribute="top" constant="7" id="PQw-xn-8I1"/>
+                            <constraint firstAttribute="trailing" secondItem="84f-0r-2nS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="U7v-VG-NkB"/>
+                            <constraint firstItem="NxY-Cd-9UK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XMB-bu-ueI"/>
+                            <constraint firstAttribute="bottom" secondItem="B11-Yn-skk" secondAttribute="bottom" constant="51" id="a5S-b5-Blx"/>
+                            <constraint firstItem="B11-Yn-skk" firstAttribute="centerX" secondItem="84f-0r-2nS" secondAttribute="centerX" type="default" id="coO-gT-dka"/>
+                            <constraint firstItem="G3S-Bi-dUi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="144" id="gHs-gA-3vZ"/>
+                            <constraint firstItem="84f-0r-2nS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="290" type="user" id="x6t-BH-PWG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZkU-PW-Rh8"/>
@@ -57,23 +87,37 @@
             <objects>
                 <viewController id="N4o-Wp-kly" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78I-aQ-XEz">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Essen wird geladen..." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="moW-uD-fjk">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Essen wird geladen..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="moW-uD-fjk">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="19i-Uw-mpa"/>
                                     <constraint firstAttribute="width" constant="192" id="FyF-o9-BY6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Heutiges Tagesessen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBV-Kt-7Pq">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UlfLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yr9-H8-Fu7">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="gSw-FN-SJo"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="moW-uD-fjk" firstAttribute="centerX" secondItem="78I-aQ-XEz" secondAttribute="centerX" type="default" id="Db1-RV-0W5"/>
-                            <constraint firstItem="moW-uD-fjk" firstAttribute="centerY" secondItem="78I-aQ-XEz" secondAttribute="centerY" type="default" id="VOU-MU-FzR"/>
+                            <constraint firstItem="IBV-Kt-7Pq" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="163" id="J0W-7e-pzA"/>
+                            <constraint firstItem="IBV-Kt-7Pq" firstAttribute="centerX" secondItem="moW-uD-fjk" secondAttribute="centerX" type="default" id="NRj-bP-zPL"/>
+                            <constraint firstItem="Yr9-H8-Fu7" firstAttribute="leading" secondItem="78I-aQ-XEz" secondAttribute="leading" type="default" id="ZrO-sZ-ruE"/>
+                            <constraint firstItem="moW-uD-fjk" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="206" id="bVA-Pa-YZK"/>
+                            <constraint firstItem="IBV-Kt-7Pq" firstAttribute="centerX" secondItem="Yr9-H8-Fu7" secondAttribute="centerX" type="default" id="i6T-Q9-J5H"/>
+                            <constraint firstItem="Yr9-H8-Fu7" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="7" id="kBI-MB-kN9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -86,7 +130,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo_ulf.jpg" width="594" height="525"/>
+        <image name="FacebookButton.png" width="269" height="42"/>
+        <image name="FacebookButtonPressed.png" width="269" height="42"/>
+        <image name="UlfLogo.png" width="320" height="101"/>
     </resources>
     <classes>
         <class className="LoginViewController" superclassName="UIViewController">
@@ -108,6 +154,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
