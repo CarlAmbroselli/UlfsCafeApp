@@ -34,9 +34,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Leider werden die Daten nur über Facebook bereitgestellt und daher müsst ihr zwei Dinge erfüllen:" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-Bi-dUi">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="jJX-Gl-mfQ"/>
+                                    <constraint firstAttribute="height" constant="112" id="l9e-J1-i51"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1. Mit Ulf befreundet sein bei Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="NxY-Cd-9UK">
@@ -44,7 +44,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="BXa-yQ-FXQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2. Euch mit Facebook verbinden" translatesAutoresizingMaskIntoConstraints="NO" id="84f-0r-2nS">
@@ -52,25 +52,25 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" type="user" id="Wcx-o2-N5Q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qix-2b-07Q" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="0O4-hf-ULa"/>
-                            <constraint firstItem="NxY-Cd-9UK" firstAttribute="top" secondItem="G3S-Bi-dUi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3EH-XR-3Ia"/>
+                            <constraint firstAttribute="bottom" secondItem="NxY-Cd-9UK" secondAttribute="bottom" constant="155" id="Dih-h0-iLv"/>
                             <constraint firstItem="G3S-Bi-dUi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Gfz-a7-Aan"/>
                             <constraint firstAttribute="trailing" secondItem="G3S-Bi-dUi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="L5S-RZ-tmn"/>
                             <constraint firstItem="84f-0r-2nS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LCW-ZS-pvm"/>
                             <constraint firstAttribute="trailing" secondItem="NxY-Cd-9UK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LaH-ZF-UvB"/>
                             <constraint firstItem="qix-2b-07Q" firstAttribute="top" secondItem="3" secondAttribute="top" constant="7" id="PQw-xn-8I1"/>
+                            <constraint firstItem="G3S-Bi-dUi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="133" id="Qyo-LK-6LD"/>
                             <constraint firstAttribute="trailing" secondItem="84f-0r-2nS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="U7v-VG-NkB"/>
+                            <constraint firstAttribute="bottom" secondItem="84f-0r-2nS" secondAttribute="bottom" constant="127" id="WTa-t2-q5L"/>
                             <constraint firstItem="NxY-Cd-9UK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XMB-bu-ueI"/>
                             <constraint firstAttribute="bottom" secondItem="B11-Yn-skk" secondAttribute="bottom" constant="51" id="a5S-b5-Blx"/>
                             <constraint firstItem="B11-Yn-skk" firstAttribute="centerX" secondItem="84f-0r-2nS" secondAttribute="centerX" type="default" id="coO-gT-dka"/>
-                            <constraint firstItem="G3S-Bi-dUi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="144" id="gHs-gA-3vZ"/>
-                            <constraint firstItem="84f-0r-2nS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="290" type="user" id="x6t-BH-PWG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZkU-PW-Rh8"/>
