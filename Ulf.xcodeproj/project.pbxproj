@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A41B78C1760AD50009E81A7 /* UlfLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B78A1760AD50009E81A7 /* UlfLogo.png */; };
+		6A41B78D1760AD50009E81A7 /* UlfLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B78B1760AD50009E81A7 /* UlfLogo@2x.png */; };
+		6A41B7A21760B34B009E81A7 /* FacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B79E1760B34B009E81A7 /* FacebookButton.png */; };
+		6A41B7A31760B34B009E81A7 /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B79F1760B34B009E81A7 /* FacebookButton@2x.png */; };
+		6A41B7A41760B34B009E81A7 /* FacebookButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B7A01760B34B009E81A7 /* FacebookButtonPressed.png */; };
+		6A41B7A51760B34B009E81A7 /* FacebookButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B7A11760B34B009E81A7 /* FacebookButtonPressed@2x.png */; };
 		6AB12AE4175E85810015B732 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB12AE3175E85810015B732 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AB12AE6175E85810015B732 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB12AE5175E85810015B732 /* Foundation.framework */; };
 		6AB12AE8175E85810015B732 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB12AE7175E85810015B732 /* CoreGraphics.framework */; };
@@ -29,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A41B78A1760AD50009E81A7 /* UlfLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UlfLogo.png; sourceTree = "<group>"; };
+		6A41B78B1760AD50009E81A7 /* UlfLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UlfLogo@2x.png"; sourceTree = "<group>"; };
+		6A41B79E1760B34B009E81A7 /* FacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButton.png; sourceTree = "<group>"; };
+		6A41B79F1760B34B009E81A7 /* FacebookButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButton@2x.png"; sourceTree = "<group>"; };
+		6A41B7A01760B34B009E81A7 /* FacebookButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButtonPressed.png; sourceTree = "<group>"; };
+		6A41B7A11760B34B009E81A7 /* FacebookButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButtonPressed@2x.png"; sourceTree = "<group>"; };
 		6AB12AE0175E85810015B732 /* Ulf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ulf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB12AE3175E85810015B732 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6AB12AE5175E85810015B732 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +154,12 @@
 		6AEF9DA4175F86E100067F7E /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				6A41B79E1760B34B009E81A7 /* FacebookButton.png */,
+				6A41B79F1760B34B009E81A7 /* FacebookButton@2x.png */,
+				6A41B7A01760B34B009E81A7 /* FacebookButtonPressed.png */,
+				6A41B7A11760B34B009E81A7 /* FacebookButtonPressed@2x.png */,
+				6A41B78A1760AD50009E81A7 /* UlfLogo.png */,
+				6A41B78B1760AD50009E81A7 /* UlfLogo@2x.png */,
 				6AB12B06175E88B00015B732 /* logo_ulf.jpg */,
 			);
 			name = Graphics;
@@ -204,6 +222,12 @@
 				6AB12AFA175E85810015B732 /* Default-568h@2x.png in Resources */,
 				6AB12AFD175E85810015B732 /* MainStoryboard.storyboard in Resources */,
 				6AB12B07175E88B00015B732 /* logo_ulf.jpg in Resources */,
+				6A41B78C1760AD50009E81A7 /* UlfLogo.png in Resources */,
+				6A41B78D1760AD50009E81A7 /* UlfLogo@2x.png in Resources */,
+				6A41B7A21760B34B009E81A7 /* FacebookButton.png in Resources */,
+				6A41B7A31760B34B009E81A7 /* FacebookButton@2x.png in Resources */,
+				6A41B7A41760B34B009E81A7 /* FacebookButtonPressed.png in Resources */,
+				6A41B7A51760B34B009E81A7 /* FacebookButtonPressed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
