@@ -22,33 +22,28 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    
+    NSLog(@"LoginViewDidAppear");
     // if FBSession is already actve instantly change to MenuView
-    
-    if (FBSession.activeSession.isOpen) {
-        [self changeView];
-    } else {
-    // else try to login without UI
-        NSArray *permissions = [NSArray arrayWithObjects:@"read_stream", nil];
-        [FBSession openActiveSessionWithReadPermissions: permissions
-                                           allowLoginUI:NO
-                                      completionHandler: ^(FBSession *session, FBSessionState state, NSError *error) {
-                                          [self sessionStateChanged:session state:state error:error];
-                                      }
-         ];
+    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        [self openSession];
     }
-    
 }
 
 - (IBAction)loginButtonPressed:(id)sender{
-    
+    NSLog(@"LoginButtonPressed");
+    [self openSession];
+}
+
+- (void)openSession
+{
     NSArray *permissions = [NSArray arrayWithObjects:@"read_stream", nil];
-    [FBSession openActiveSessionWithReadPermissions: permissions
-                                        allowLoginUI:YES
-                                        completionHandler: ^(FBSession *session, FBSessionState state, NSError *error) {
-                                        [self sessionStateChanged:session state:state error:error];
-                                  }
-     ];
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:
+     ^(FBSession *session,
+       FBSessionState state, NSError *error) {
+         [self sessionStateChanged:session state:state error:error];
+     }];
 }
 
 - (void)changeView {
@@ -66,9 +61,11 @@
             break;
         }        
         case FBSessionStateClosed:
+            [FBSession.activeSession closeAndClearTokenInformation];
             NSLog(@"Closed");
             break;
         case FBSessionStateClosedLoginFailed:
+            [FBSession.activeSession closeAndClearTokenInformation];
             NSLog(@"LoginFailed");
             break;
         default:
@@ -77,14 +74,21 @@
     }
     
     if (error) {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Error"
-                                  message:error.localizedDescription
-                                  delegate:nil
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
-    }    
+        NSLog(@"%@", error.localizedDescription);
+//        [FBSession.activeSession closeAndClearTokenInformation];
+//        UIAlertView *alertView = [[UIAlertView alloc]
+//                                  initWithTitle:@"Error"
+//                                  message:error.localizedDescription
+//                                  delegate:nil
+//                                  cancelButtonTitle:@"OK"
+//                                  otherButtonTitles:nil];
+//        [alertView show];
+    }
+}
+
+- (BOOL)application:(UIApplication *)application  openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [FBSession.activeSession handleOpenURL:url];
 }
 
 @end

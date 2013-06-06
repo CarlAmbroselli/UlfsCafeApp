@@ -32,6 +32,8 @@
 		6AEF9DB2175F918000067F7E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DB1175F918000067F7E /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DB4175F918600067F7E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DB3175F918600067F7E /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DB6175F918E00067F7E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DB5175F918E00067F7E /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DAAEF4111760FB24004D1A55 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAEF4101760FB24004D1A55 /* Icon.png */; };
+		DAAEF4131760FB28004D1A55 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAEF4121760FB28004D1A55 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		6AEF9DB1175F918000067F7E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6AEF9DB3175F918600067F7E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6AEF9DB5175F918E00067F7E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DAAEF4101760FB24004D1A55 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DAAEF4121760FB28004D1A55 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 		6AB12AD7175E85810015B732 = {
 			isa = PBXGroup;
 			children = (
+				DAAEF4121760FB28004D1A55 /* Icon@2x.png */,
+				DAAEF4101760FB24004D1A55 /* Icon.png */,
 				6AB12AE9175E85810015B732 /* Ulf */,
 				6AB12AE2175E85810015B732 /* Frameworks */,
 				6AB12AE1175E85810015B732 /* Products */,
@@ -228,6 +234,8 @@
 				6A41B7A31760B34B009E81A7 /* FacebookButton@2x.png in Resources */,
 				6A41B7A41760B34B009E81A7 /* FacebookButtonPressed.png in Resources */,
 				6A41B7A51760B34B009E81A7 /* FacebookButtonPressed@2x.png in Resources */,
+				DAAEF4111760FB24004D1A55 /* Icon.png in Resources */,
+				DAAEF4131760FB28004D1A55 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
