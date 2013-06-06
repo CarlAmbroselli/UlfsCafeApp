@@ -122,6 +122,7 @@
                     </view>
                     <connections>
                         <outlet property="menuLabel" destination="moW-uD-fjk" id="cL1-ki-IAb"/>
+                        <segue destination="2" kind="modal" identifier="loginViewSegue" id="Mmc-dK-UEO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfo-OU-fiC" userLabel="First Responder" sceneMemberID="firstResponder"/>

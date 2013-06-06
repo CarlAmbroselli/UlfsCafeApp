@@ -10,7 +10,6 @@
 
 @interface MenuViewController ()
 
-
 @end
 
 @implementation MenuViewController
@@ -18,10 +17,40 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.menuLabel.text = self.meal;
+    
+//    if FBSession is active load the meal
+//  else change to loginView to get a new FBSession
+    
+    if ( FBSession.activeSession.isOpen ){
+        [self loadMeal];
+    } else {
+        [self changeView];
+    }
 }
 
 
+- (void)loadMeal
+{
+    [[FBRequest requestForGraphPath:@"/ulf.hansen73/feed?fields=message"] startWithCompletionHandler:
+     ^(FBRequestConnection *connection, id result, NSError *error) {
+         if (!error) {
+             NSString * meal = [[[result objectForKey:@"data"]
+                           objectAtIndex:0]
+                          objectForKey:@"message"];
+             NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"Tagesessen .*: " options:NSRegularExpressionCaseInsensitive error:&error];
+             
+             meal = [regex stringByReplacingMatchesInString: meal options:0 range:NSMakeRange(0, [meal length]) withTemplate:@""];
+             
+            self.menuLabel.text = meal;
+             
+         }
+     } ];
+}
+
+
+- (void)changeView {
+    [self performSegueWithIdentifier:@"loginViewSegue" sender:self];
+}
 
 
 @end

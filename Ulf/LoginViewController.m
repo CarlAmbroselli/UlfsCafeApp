@@ -11,8 +11,6 @@
 
 @interface LoginViewController ()
 
-@property (strong, nonatomic) NSString* meal;
-
 @end
 
 @implementation LoginViewController
@@ -20,54 +18,42 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [[FBSession activeSession] closeAndClearTokenInformation];
+    
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    
+    // if FBSession is already actve instantly change to MenuView
+    
+    if (FBSession.activeSession.isOpen) {
+        [self changeView];
+    } else {
+    // else try to login without UI
+        NSArray *permissions = [NSArray arrayWithObjects:@"read_stream", nil];
+        [FBSession openActiveSessionWithReadPermissions: permissions
+                                           allowLoginUI:NO
+                                      completionHandler: ^(FBSession *session, FBSessionState state, NSError *error) {
+                                          [self sessionStateChanged:session state:state error:error];
+                                      }
+         ];
+    }
+    
+}
 
 - (IBAction)loginButtonPressed:(id)sender{
-    //TODO: Handle Login
-    //Help (Maybe): https://developers.facebook.com/docs/tutorials/ios-sdk-tutorial/authenticate/
     
-    //1. Login to Facebook
     NSArray *permissions = [NSArray arrayWithObjects:@"read_stream", nil];
     [FBSession openActiveSessionWithReadPermissions: permissions
-                                       allowLoginUI:YES
-                                  completionHandler: ^(FBSession *session, FBSessionState state, NSError *error) {
-         [self sessionStateChanged:session state:state error:error];
-     }];
-    
-
+                                        allowLoginUI:YES
+                                        completionHandler: ^(FBSession *session, FBSessionState state, NSError *error) {
+                                        [self sessionStateChanged:session state:state error:error];
+                                  }
+     ];
 }
 
-- (void)loadMeal
-{
-    [[FBRequest requestForGraphPath:@"/ulf.hansen73/feed?fields=message"] startWithCompletionHandler:
-     ^(FBRequestConnection *connection, id result, NSError *error) {
-         if (!error) {
-             self.meal = [[[result objectForKey:@"data"]
-                           objectAtIndex:0]
-                          objectForKey:@"message"];
-             NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"Tagesessen .*: " options:NSRegularExpressionCaseInsensitive error:&error];
-             
-             self.meal = [regex stringByReplacingMatchesInString:self.meal options:0 range:NSMakeRange(0, [self.meal length]) withTemplate:@""];
-             [self performSegueWithIdentifier:@"menuViewSegue" sender:self];
-         }
-     } ];
+- (void)changeView {
+    [self performSegueWithIdentifier:@"menuViewSegue" sender:self];
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-    if ([[segue identifier] isEqualToString:@"menuViewSegue"])
-    {
-        // Get reference to the destination view controller
-        MenuViewController *vc = [segue destinationViewController];
-        
-        // Pass any objects to the view controller here, like...
-        vc.meal = self.meal;
-    }
-}
-
 
 - (void)sessionStateChanged:(FBSession *)session
                       state:(FBSessionState) state
@@ -76,7 +62,7 @@
     switch (state) {
         case FBSessionStateOpen: {
             NSLog(@"Open");
-            [self loadMeal];
+            [self changeView];
             break;
         }        
         case FBSessionStateClosed:

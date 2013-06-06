@@ -12,6 +12,5 @@
 @interface MenuViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *menuLabel;
-@property (strong, nonatomic) NSString* meal;
 
 @end
