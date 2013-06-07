@@ -23,7 +23,6 @@
 		6AB12AF8175E85810015B732 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12AF7175E85810015B732 /* Default@2x.png */; };
 		6AB12AFA175E85810015B732 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12AF9175E85810015B732 /* Default-568h@2x.png */; };
 		6AB12AFD175E85810015B732 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12AFB175E85810015B732 /* MainStoryboard.storyboard */; };
-		6AB12B00175E85810015B732 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB12AFF175E85810015B732 /* LoginViewController.m */; };
 		6AB12B07175E88B00015B732 /* logo_ulf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12B06175E88B00015B732 /* logo_ulf.jpg */; };
 		6AEF9DA7175F884800067F7E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEF9DA6175F884800067F7E /* MenuViewController.m */; };
 		6AEF9DAC175F915200067F7E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DAB175F915200067F7E /* FacebookSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -57,8 +56,6 @@
 		6AB12AF7175E85810015B732 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6AB12AF9175E85810015B732 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6AB12AFC175E85810015B732 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6AB12AFE175E85810015B732 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		6AB12AFF175E85810015B732 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6AB12B06175E88B00015B732 /* logo_ulf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_ulf.jpg; sourceTree = "<group>"; };
 		6AEF9DA5175F884800067F7E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		6AEF9DA6175F884800067F7E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
@@ -133,8 +130,6 @@
 				6AB12AFB175E85810015B732 /* MainStoryboard.storyboard */,
 				6AEF9DA5175F884800067F7E /* MenuViewController.h */,
 				6AEF9DA6175F884800067F7E /* MenuViewController.m */,
-				6AB12AFE175E85810015B732 /* LoginViewController.h */,
-				6AB12AFF175E85810015B732 /* LoginViewController.m */,
 				6AEF9DA4175F86E100067F7E /* Graphics */,
 				6AB12AEA175E85810015B732 /* Supporting Files */,
 			);
@@ -248,7 +243,6 @@
 			files = (
 				6AB12AF0175E85810015B732 /* main.m in Sources */,
 				6AB12AF4175E85810015B732 /* AppDelegate.m in Sources */,
-				6AB12B00175E85810015B732 /* LoginViewController.m in Sources */,
 				6AEF9DA7175F884800067F7E /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
