@@ -33,6 +33,8 @@
 		6AEF9DB2175F918000067F7E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DB1175F918000067F7E /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DB4175F918600067F7E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DB3175F918600067F7E /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DB6175F918E00067F7E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DB5175F918E00067F7E /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DA906A1E1762420300A5EF4A /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = DA906A1C1762420300A5EF4A /* 37x-Checkmark.png */; };
+		DA906A1F1762420300A5EF4A /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA906A1D1762420300A5EF4A /* 37x-Checkmark@2x.png */; };
 		DAAEF4111760FB24004D1A55 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAEF4101760FB24004D1A55 /* Icon.png */; };
 		DAAEF4131760FB28004D1A55 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAEF4121760FB28004D1A55 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		6AEF9DB1175F918000067F7E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6AEF9DB3175F918600067F7E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6AEF9DB5175F918E00067F7E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DA906A1C1762420300A5EF4A /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		DA906A1D1762420300A5EF4A /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 		DAAEF4101760FB24004D1A55 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		DAAEF4121760FB28004D1A55 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +172,8 @@
 		6AEF9DA4175F86E100067F7E /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				DA906A1C1762420300A5EF4A /* 37x-Checkmark.png */,
+				DA906A1D1762420300A5EF4A /* 37x-Checkmark@2x.png */,
 				6A317C591761E46400526ED4 /* refreshButton.png */,
 				6A317C5A1761E46400526ED4 /* refreshButton@2x.png */,
 				6A41B79E1760B34B009E81A7 /* FacebookButton.png */,
@@ -248,6 +254,8 @@
 				DAAEF4131760FB28004D1A55 /* Icon@2x.png in Resources */,
 				6A317C5B1761E46400526ED4 /* refreshButton.png in Resources */,
 				6A317C5C1761E46400526ED4 /* refreshButton@2x.png in Resources */,
+				DA906A1E1762420300A5EF4A /* 37x-Checkmark.png in Resources */,
+				DA906A1F1762420300A5EF4A /* 37x-Checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
