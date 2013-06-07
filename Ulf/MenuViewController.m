@@ -36,28 +36,39 @@
     NSData * jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://openmensa.org/api/v2/canteens/112/meals"]];
     if (jsonData != nil){
         NSLog(@"Meal loaded");
-        NSArray * arrayData = [NSJSONSerialization
-                 JSONObjectWithData: jsonData
-                 options: NSJSONReadingMutableContainers
-                 error:nil];
-    
-        NSString * meal  = [[[[arrayData objectAtIndex:0] objectForKey:@"meals"] objectAtIndex:0] objectForKey:@"name"];
+
         
-        NSNumber * price = [[[[[arrayData objectAtIndex:0] objectForKey:@"meals"] objectAtIndex:0] objectForKey:@"prices"] objectForKey:@"others"];
-        NSNumberFormatter * format = [[NSNumberFormatter alloc ] init];
-        [format setNumberStyle:NSNumberFormatterDecimalStyle];
-        [format setPositiveFormat: @"Preis: #.00€"];
-        
-        BOOL closed  = [[[arrayData objectAtIndex:0] objectForKey:@"closed"] boolValue];
-        
-        if(!closed){
-            self.menuLabel.text = meal;
-            self.priceLabel.text = [format stringFromNumber:price];
+        @try {
+            NSArray * arrayData = [NSJSONSerialization
+                                   JSONObjectWithData: jsonData
+                                   options: NSJSONReadingMutableContainers
+                                   error:nil];
+            
+            NSString * meal  = [[[[arrayData objectAtIndex:0] objectForKey:@"meals"] objectAtIndex:0] objectForKey:@"name"];
+            
+            NSNumber * price = [[[[[arrayData objectAtIndex:0] objectForKey:@"meals"] objectAtIndex:0] objectForKey:@"prices"] objectForKey:@"others"];
+            NSNumberFormatter * format = [[NSNumberFormatter alloc ] init];
+            [format setNumberStyle:NSNumberFormatterDecimalStyle];
+            [format setPositiveFormat: @"Preis: #.00€"];
+            
+            BOOL closed  = [[[arrayData objectAtIndex:0] objectForKey:@"closed"] boolValue];
+            
+            if(!closed){
+                self.menuLabel.text = meal;
+                self.priceLabel.text = [format stringFromNumber:price];
+            }
+            else{
+                self.menuLabel.text = @"Ulf's Cafe ist momentan leider geschlossen!";
+                self.priceLabel.text = @"";
+            }
         }
-        else{
-            self.menuLabel.text = @"Ulf's Cafe ist momentan leider geschlossen!";
+        @catch (NSException *exception) {
+            NSLog(@"FERIEN!");
+            self.menuLabel.text = @"Momentan ist leider kein Tagesessen verfügbar.";
             self.priceLabel.text = @"";
         }
+    
+        
     } else {
         NSLog(@"Meal could not be retrieved");
         self.menuLabel.text = @"Tagesessen konnte nicht geladen werden.";
