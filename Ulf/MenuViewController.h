@@ -11,6 +11,7 @@
 @interface MenuViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *menuLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 - (IBAction)refreshButtonPressed:(id)sender;
 
 @end

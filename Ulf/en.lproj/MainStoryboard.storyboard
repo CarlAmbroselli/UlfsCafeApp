@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="N4o-Wp-kly">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="N4o-Wp-kly">
     <dependencies>
+        <deployment version="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
@@ -12,29 +13,33 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Essen wird geladen..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="moW-uD-fjk">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="Zac-ag-UeD"/>
-                                    <constraint firstAttribute="height" constant="116" id="fdq-kM-ukj"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Essen wird geladen..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="moW-uD-fjk">
+                                <rect key="frame" x="64" y="245" width="192" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Heutiges Tagesessen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBV-Kt-7Pq">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ajj-x6-Q4E">
+                                <rect key="frame" x="93" y="369" width="135" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Heutiges Tagesessen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IBV-Kt-7Pq">
+                                <rect key="frame" x="59" y="196" width="203" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UlfLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yr9-H8-Fu7">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="7VF-dy-zHS"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UlfLogo.png" id="Yr9-H8-Fu7">
+                                <rect key="frame" x="0.0" y="8" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.40000000000000013" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tA3-7E-4Nd">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="21" id="1ZG-gU-pC8"/>
-                                </constraints>
+                            <button opaque="NO" alpha="0.40000000000000013" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tA3-7E-4Nd">
+                                <rect key="frame" x="279" y="416" width="21" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="refreshButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,19 +54,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Yr9-H8-Fu7" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="8" id="MsK-T6-5pU"/>
-                            <constraint firstItem="moW-uD-fjk" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="258" id="QC9-jn-ILZ"/>
-                            <constraint firstItem="IBV-Kt-7Pq" firstAttribute="top" secondItem="78I-aQ-XEz" secondAttribute="top" constant="196" id="Qfp-CP-jvS"/>
-                            <constraint firstAttribute="bottom" secondItem="tA3-7E-4Nd" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="V9V-Cd-kzT"/>
-                            <constraint firstAttribute="trailing" secondItem="tA3-7E-4Nd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hn5-iG-VHl"/>
-                            <constraint firstItem="Yr9-H8-Fu7" firstAttribute="centerX" secondItem="IBV-Kt-7Pq" secondAttribute="centerX" type="default" id="w5H-FA-TZi"/>
-                            <constraint firstItem="moW-uD-fjk" firstAttribute="centerX" secondItem="IBV-Kt-7Pq" secondAttribute="centerX" type="default" id="xIB-pP-tN4"/>
-                            <constraint firstItem="Yr9-H8-Fu7" firstAttribute="leading" secondItem="78I-aQ-XEz" secondAttribute="leading" type="default" id="zKe-yk-g7K"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="menuLabel" destination="moW-uD-fjk" id="cL1-ki-IAb"/>
+                        <outlet property="priceLabel" destination="ajj-x6-Q4E" id="TMz-6x-eFk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfo-OU-fiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -79,10 +75,8 @@
             <relationships>
                 <relationship kind="action" name="refreshButtonPressed:"/>
                 <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
             </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

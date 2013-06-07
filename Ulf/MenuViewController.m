@@ -28,34 +28,43 @@
 
 - (void)loadMeal
 {
+    NSLog(@"loading Meal");
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.labelText = @"Wird geladen...";
     
     NSData * jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://openmensa.org/api/v2/canteens/112/meals"]];
     if (jsonData != nil){
-    NSArray * arrayData = [NSJSONSerialization
+        NSLog(@"Meal loaded");
+        NSArray * arrayData = [NSJSONSerialization
                  JSONObjectWithData: jsonData
                  options: NSJSONReadingMutableContainers
                  error:nil];
     
-    NSString * meal  = [[[[arrayData objectAtIndex:0] objectForKey:@"meals"] objectAtIndex:0] objectForKey:@"name"];
-    id price = [[[[[arrayData objectAtIndex:0] objectForKey:@"meals"] objectAtIndex:0] objectForKey:@"prices"] objectForKey:@"others"];
-        self.menuLabel.text = meal;    
+        NSString * meal  = [[[[arrayData objectAtIndex:0] objectForKey:@"meals"] objectAtIndex:0] objectForKey:@"name"];
+        
+        NSNumber * price = [[[[[arrayData objectAtIndex:0] objectForKey:@"meals"] objectAtIndex:0] objectForKey:@"prices"] objectForKey:@"others"];
+        NSNumberFormatter * format = [[NSNumberFormatter alloc ] init];
+        [format setNumberStyle:NSNumberFormatterDecimalStyle];
+        [format setPositiveFormat: @"Preis: #.00€"];
+        
+
+        self.menuLabel.text = meal;
+        self.priceLabel.text = [format stringFromNumber:price];
     } else {
+        NSLog(@"Meal could not be retrieved");
         self.menuLabel.text = @"Tagesessen konnte nicht geladen werden.";
+        self.priceLabel.text = @"";
     }
     [hud hide:YES];
-
 }
 
 
 - (IBAction)refreshButtonPressed:(id)sender {
-    if ( FBSession.activeSession.isOpen){
-        NSLog(@"try to load Meal");
-        [self loadMeal];
-    } else {
-        [self changeView];
-    }
+    [self loadMeal];
+}
+- (void)viewDidUnload {
+    [self setPriceLabel:nil];
+    [super viewDidUnload];
 }
 @end
