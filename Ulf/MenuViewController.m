@@ -48,9 +48,16 @@
         [format setNumberStyle:NSNumberFormatterDecimalStyle];
         [format setPositiveFormat: @"Preis: #.00€"];
         
-
-        self.menuLabel.text = meal;
-        self.priceLabel.text = [format stringFromNumber:price];
+        BOOL closed  = [[[arrayData objectAtIndex:0] objectForKey:@"closed"] boolValue];
+        
+        if(!closed){
+            self.menuLabel.text = meal;
+            self.priceLabel.text = [format stringFromNumber:price];
+        }
+        else{
+            self.menuLabel.text = @"Ulf's Cafe ist momentan leider geschlossen!";
+            self.priceLabel.text = @"";
+        }
     } else {
         NSLog(@"Meal could not be retrieved");
         self.menuLabel.text = @"Tagesessen konnte nicht geladen werden.";
