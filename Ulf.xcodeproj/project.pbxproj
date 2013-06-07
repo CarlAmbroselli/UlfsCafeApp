@@ -26,10 +26,8 @@
 		6AB12AF8175E85810015B732 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12AF7175E85810015B732 /* Default@2x.png */; };
 		6AB12AFA175E85810015B732 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12AF9175E85810015B732 /* Default-568h@2x.png */; };
 		6AB12AFD175E85810015B732 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12AFB175E85810015B732 /* MainStoryboard.storyboard */; };
-		6AB12B00175E85810015B732 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB12AFF175E85810015B732 /* LoginViewController.m */; };
 		6AB12B07175E88B00015B732 /* logo_ulf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AB12B06175E88B00015B732 /* logo_ulf.jpg */; };
 		6AEF9DA7175F884800067F7E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEF9DA6175F884800067F7E /* MenuViewController.m */; };
-		6AEF9DAC175F915200067F7E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DAB175F915200067F7E /* FacebookSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DAE175F917400067F7E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DAD175F917400067F7E /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DB0175F917900067F7E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DAF175F917900067F7E /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6AEF9DB2175F918000067F7E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEF9DB1175F918000067F7E /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -64,12 +62,9 @@
 		6AB12AF7175E85810015B732 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6AB12AF9175E85810015B732 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6AB12AFC175E85810015B732 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6AB12AFE175E85810015B732 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		6AB12AFF175E85810015B732 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6AB12B06175E88B00015B732 /* logo_ulf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_ulf.jpg; sourceTree = "<group>"; };
 		6AEF9DA5175F884800067F7E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		6AEF9DA6175F884800067F7E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		6AEF9DAB175F915200067F7E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		6AEF9DAD175F917400067F7E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6AEF9DAF175F917900067F7E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		6AEF9DB1175F918000067F7E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -92,7 +87,6 @@
 				6AEF9DAE175F917400067F7E /* Accounts.framework in Frameworks */,
 				6AB12AE8175E85810015B732 /* CoreGraphics.framework in Frameworks */,
 				6AB12AE6175E85810015B732 /* Foundation.framework in Frameworks */,
-				6AEF9DAC175F915200067F7E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +129,6 @@
 				6AEF9DB1175F918000067F7E /* libsqlite3.dylib */,
 				6AEF9DAF175F917900067F7E /* AdSupport.framework */,
 				6AEF9DAD175F917400067F7E /* Accounts.framework */,
-				6AEF9DAB175F915200067F7E /* FacebookSDK.framework */,
 				6AB12AE3175E85810015B732 /* UIKit.framework */,
 				6AB12AE5175E85810015B732 /* Foundation.framework */,
 				6AB12AE7175E85810015B732 /* CoreGraphics.framework */,
@@ -149,8 +142,6 @@
 				6AB12AFB175E85810015B732 /* MainStoryboard.storyboard */,
 				6AEF9DA5175F884800067F7E /* MenuViewController.h */,
 				6AEF9DA6175F884800067F7E /* MenuViewController.m */,
-				6AB12AFE175E85810015B732 /* LoginViewController.h */,
-				6AB12AFF175E85810015B732 /* LoginViewController.m */,
 				6AEF9DA4175F86E100067F7E /* Graphics */,
 				6AB12AEA175E85810015B732 /* Supporting Files */,
 			);
@@ -269,7 +260,6 @@
 			files = (
 				6AB12AF0175E85810015B732 /* main.m in Sources */,
 				6AB12AF4175E85810015B732 /* AppDelegate.m in Sources */,
-				6AB12B00175E85810015B732 /* LoginViewController.m in Sources */,
 				6AEF9DA7175F884800067F7E /* MenuViewController.m in Sources */,
 				6A317CA01761E59800526ED4 /* MBProgressHUD.m in Sources */,
 			);
