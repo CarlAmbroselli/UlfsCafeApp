@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "MBProgressHUD.h"
 
 @interface MenuViewController ()
 
@@ -35,6 +36,10 @@
 
 - (void)loadMeal
 {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Wird geladen...";
+    
     [[FBRequest requestForGraphPath:@"/ulf.hansen73/feed?fields=message"] startWithCompletionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
          if (!error) {
@@ -60,6 +65,7 @@
              NSLog(@"FBRequest failed");
              [self changeView];
          }
+         [hud hide:YES];
      } ];
 }
 
@@ -69,4 +75,12 @@
 }
 
 
+- (IBAction)refreshButtonPressed:(id)sender {
+    if ( FBSession.activeSession.isOpen){
+        NSLog(@"try to load Meal");
+        [self loadMeal];
+    } else {
+        [self changeView];
+    }
+}
 @end

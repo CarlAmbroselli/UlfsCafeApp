@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A317C5B1761E46400526ED4 /* refreshButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A317C591761E46400526ED4 /* refreshButton.png */; };
+		6A317C5C1761E46400526ED4 /* refreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A317C5A1761E46400526ED4 /* refreshButton@2x.png */; };
+		6A317CA01761E59800526ED4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A317C9F1761E59800526ED4 /* MBProgressHUD.m */; };
 		6A41B78C1760AD50009E81A7 /* UlfLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B78A1760AD50009E81A7 /* UlfLogo.png */; };
 		6A41B78D1760AD50009E81A7 /* UlfLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B78B1760AD50009E81A7 /* UlfLogo@2x.png */; };
 		6A41B7A21760B34B009E81A7 /* FacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A41B79E1760B34B009E81A7 /* FacebookButton.png */; };
@@ -37,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A317C591761E46400526ED4 /* refreshButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refreshButton.png; sourceTree = "<group>"; };
+		6A317C5A1761E46400526ED4 /* refreshButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshButton@2x.png"; sourceTree = "<group>"; };
+		6A317C9E1761E59800526ED4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6A317C9F1761E59800526ED4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6A41B78A1760AD50009E81A7 /* UlfLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UlfLogo.png; sourceTree = "<group>"; };
 		6A41B78B1760AD50009E81A7 /* UlfLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UlfLogo@2x.png"; sourceTree = "<group>"; };
 		6A41B79E1760B34B009E81A7 /* FacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButton.png; sourceTree = "<group>"; };
@@ -92,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A317C9D1761E59700526ED4 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6A317C9E1761E59800526ED4 /* MBProgressHUD.h */,
+				6A317C9F1761E59800526ED4 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		6AB12AD7175E85810015B732 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +160,7 @@
 		6AB12AEA175E85810015B732 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6A317C9D1761E59700526ED4 /* MBProgressHUD */,
 				6AB12AF2175E85810015B732 /* AppDelegate.h */,
 				6AB12AF3175E85810015B732 /* AppDelegate.m */,
 				6AB12AEB175E85810015B732 /* Ulf-Info.plist */,
@@ -160,6 +177,8 @@
 		6AEF9DA4175F86E100067F7E /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				6A317C591761E46400526ED4 /* refreshButton.png */,
+				6A317C5A1761E46400526ED4 /* refreshButton@2x.png */,
 				6A41B79E1760B34B009E81A7 /* FacebookButton.png */,
 				6A41B79F1760B34B009E81A7 /* FacebookButton@2x.png */,
 				6A41B7A01760B34B009E81A7 /* FacebookButtonPressed.png */,
@@ -236,6 +255,8 @@
 				6A41B7A51760B34B009E81A7 /* FacebookButtonPressed@2x.png in Resources */,
 				DAAEF4111760FB24004D1A55 /* Icon.png in Resources */,
 				DAAEF4131760FB28004D1A55 /* Icon@2x.png in Resources */,
+				6A317C5B1761E46400526ED4 /* refreshButton.png in Resources */,
+				6A317C5C1761E46400526ED4 /* refreshButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +271,7 @@
 				6AB12AF4175E85810015B732 /* AppDelegate.m in Sources */,
 				6AB12B00175E85810015B732 /* LoginViewController.m in Sources */,
 				6AEF9DA7175F884800067F7E /* MenuViewController.m in Sources */,
+				6A317CA01761E59800526ED4 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
